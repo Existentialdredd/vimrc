@@ -13,6 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" NERDCommenter
+Plugin 'preservim/nerdcommenter'
+
 " vim solarized" 
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'dracula/vim'
