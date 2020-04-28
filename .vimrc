@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " NERDTree
 Plugin 'scrooloose/nerdtree'
+let NERDTreeShowHidden=1
 
 " NERDCommenter
 Plugin 'preservim/nerdcommenter'
@@ -37,6 +38,12 @@ syntax on
 " reloads .vimrc -- making all changes active
 map <silent> <Leader>v :source ~/.vimrc<CR>:PluginInstall<CR>:bdelete<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <silent> <Leader>nt :NERDTree <CR>
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-l> <c-w>l
+nnoremap <leader>k <c-u>
+nnoremap <leader>j <c-d>
 let g:solarized_contrast="high"
 "
 "jedi-vim options
