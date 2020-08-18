@@ -46,6 +46,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 let NERDTreeShowHidden=1
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
@@ -117,8 +118,11 @@ map <silent> <Leader>v :source ~/.config/nvim/init.vim<CR>:PlugInstall<CR>:bdele
 map <silent> <Leader>nt :NERDTree <CR>
 
 " run current python script in window below
-map <silent> <Leader>t :w <CR> :Dispatch python3 %:p <CR>
-map <silent> <Leader>T :w <CR> :Dispatch   %:p<Left><Left><Left><Left>
+map <silent> <Leader>t :w <CR> :!tsb python3 %:p <CR>
+map <silent> <Leader>T :w <CR> :!tsb   %:p<Left><Left><Left><Left>
+
+map <silent> <Leader>d :w <CR> :Dispatch python3 %:p <CR>
+map <silent> <Leader>D :w <CR> :Dispatch   %:p<Left><Left><Left><Left>
 
 nnoremap <silent> <Leader>w :w <CR>
 
@@ -263,3 +267,5 @@ augroup highlight_yank
 augroup END
 
 autocmd BufWritePre * :call TrimWhitespace()
+
+set shellcmdflag=-ic
