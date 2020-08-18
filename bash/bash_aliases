@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export PROG='cd /Users/ericpenner/desktop/programming'
+
+export RUN='/Users/ericpenner/desktop/scratch.py'
+
