@@ -1,6 +1,5 @@
 #!/bin/bash
 
-export PROG='cd /Users/ericpenner/desktop/programming'
+export PROJ="/Users/upenner/desktop/projects"
 
-export RUN='/Users/ericpenner/desktop/scratch.py'
-
+export AIDA="/Users/upenner/desktop/projects/aida"

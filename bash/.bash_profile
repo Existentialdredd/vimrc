@@ -1,24 +1,30 @@
-export PATH==$PATH:
 
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
+if [ -f $HOME/.bashrc ]; then
+	source $HOME/.bashrc
+fi
 
-# MacPorts Installer addition on 2017-02-28_at_13:41:04: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+if [ -f $HOME/.bash/bash_aliases ]; then
+	source $HOME/.bash/bash_aliases
+fi
 
+if [ -f $HOME/.bash/bash_functions ]; then
+	source $HOME/.bash/bash_functions
+fi
 
-# MacPorts Installer addition on 2017-02-28_at_16:15:36: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+# added by Anaconda3 installer
+# export PATH="/Users/upenner/anaconda3/bin:$PATH"  # commented out by conda initialize
 
-
-# added by Anaconda3 5.0.1 installer
-export PATH="/anaconda3/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ericpenner/google-cloud-sdk/path.bash.inc' ]; then source '/Users/ericpenner/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ericpenner/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/ericpenner/google-cloud-sdk/completion.bash.inc'; fi
-
-if [ -f '/Users/ericpenner/.bashrc' ]; then source '/Users/ericpenner/.bashrc'; fi
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/upenner/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/upenner/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/upenner/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/upenner/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
