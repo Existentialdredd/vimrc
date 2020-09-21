@@ -32,11 +32,11 @@ source $HOME/dot_files/nvim/plugins/bujo_config.vim
 source $HOME/dot_files/nvim/plugins/fugitive_config.vim
 
 " jedi-vim
-source $HOME/dot_files/nvim/plugins/jedi-vim_config.vim
+"source $HOME/dot_files/nvim/plugins/jedi-vim_config.vim
 
 " coc
 source $HOME/dot_files/nvim/plugins/coc_config.vim
 
 " ale
-source $HOME/dot_files/nvim/plugins/ale_config.vim
+"source $HOME/dot_files/nvim/plugins/ale_config.vim
 
