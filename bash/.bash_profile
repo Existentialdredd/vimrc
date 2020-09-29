@@ -3,14 +3,6 @@ if [ -f $HOME/.bashrc ]; then
 	source $HOME/.bashrc
 fi
 
-if [ -f $HOME/.bash/bash_aliases ]; then
-	source $HOME/.bash/bash_aliases
-fi
-
-if [ -f $HOME/.bash/bash_functions ]; then
-	source $HOME/.bash/bash_functions
-fi
-
 # added by Anaconda3 installer
 # export PATH="/Users/upenner/anaconda3/bin:$PATH"  # commented out by conda initialize
 
