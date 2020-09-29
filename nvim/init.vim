@@ -39,4 +39,9 @@ source $HOME/dot_files/nvim/plugins/coc_config.vim
 
 " ale
 "source $HOME/dot_files/nvim/plugins/ale_config.vim
+"
+
+" vimade
+source $HOME/dot_files/nvim/plugins/ale_config.vim
+
 

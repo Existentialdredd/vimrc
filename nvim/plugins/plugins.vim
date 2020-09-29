@@ -22,4 +22,5 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'colepeters/spacemacs-theme.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'phanviet/vim-monokai-pro'
+Plug 'TaDaa/vimade'
 call plug#end()
