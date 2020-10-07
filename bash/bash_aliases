@@ -3,3 +3,5 @@
 export PROJ="/Users/upenner/desktop/projects"
 
 export AIDA="/Users/upenner/desktop/projects/aida"
+
+export GITLAB_USERNAME="ericpnr"
