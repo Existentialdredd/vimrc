@@ -6,8 +6,8 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 map <silent> <Leader>t :w <CR> :!tsb python3 %:p <CR>
 map <silent> <Leader>T :w <CR> :!tsb   %:p<Left><Left><Left><Left>
 " run current python script in dispatch below
-map <silent> <Leader>d :w <CR> :Dispatch python3 %:p <CR>
-map <silent> <Leader>D :w <CR> :Dispatch   %:p<Left><Left><Left><Left>
+"map <silent> <Leader>d :w <CR> :Dispatch python3 %:p <CR>
+"map <silent> <Leader>D :w <CR> :Dispatch   %:p<Left><Left><Left><Left>
 
 " write buffer
 nnoremap <silent> <Leader>w :w <CR>
@@ -24,8 +24,6 @@ nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 
-nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
-
 " marks and visual mode ?
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -35,7 +33,7 @@ nnoremap <leader>r :%s///g<Left><Left>
 nnoremap <leader>rc :%s///gc<Left><Left><Left>
 
 " find and replace the highlighted text (in visual mode) globally
-vnoremap <C-h> ""y:%s/<C-R>=escape(@", '/\')<CR>//gc<Left><Left>
+vnoremap <C-h> ""y:%s/<C-R>=escape(@", '/\')<CR>//gc<Left><Left><Left>
 
 nnoremap <leader>B :buffers <CR>:b<space>
 map <leader>b :Buffers<CR>
