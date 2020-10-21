@@ -42,6 +42,6 @@ source $HOME/dot_files/nvim/plugins/coc_config.vim
 "
 
 " vimade
-source $HOME/dot_files/nvim/plugins/ale_config.vim
+source $HOME/dot_files/nvim/plugins/vimade_config.vim
 
 
