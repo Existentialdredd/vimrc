@@ -8,17 +8,17 @@ nmap <leader>ft <Plug>(coc-type-definition)
 nmap <leader>fi <Plug>(coc-implementation)
 nmap <leader>fr <Plug>(coc-references)
 "nmap <leader>rr <Plug>(coc-rename)
-nmap <leader>D <Plug>(coc-diagnostic-prev)
-nmap <leader>d <Plug>(coc-diagnostic-next)
-"nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-"nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+"nmap <leader>D <Plug>(coc-diagnostic-prev)
+"nmap <leader>d <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>D <Plug>(coc-diagnostic-prev-error)
+nmap <silent> <leader>d <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>fc :CocSearch
 nnoremap <leader>fC :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 nnoremap <silent><nowait> <Leader>cd  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> <leader>ce  :<C-u>CocList extensions<cr>
-" Show commands.
+"n Show commands.
 nnoremap <silent><nowait> <leader>cc  :<C-u>CocList commands<cr>
 " Find symbol of current document
 nnoremap <silent><nowait> <leader>co  :<C-u>CocList outline<cr>
