@@ -37,3 +37,7 @@ vnoremap <C-h> ""y:%s/<C-R>=escape(@", '/\')<CR>//gc<Left><Left><Left>
 
 nnoremap <leader>B :buffers <CR>:b<space>
 map <leader>b :Buffers<CR>
+
+nnoremap <silent> <leader>xb :bp\|bd #<CR>
+nnoremap <silent> <leader>xB :bd <CR>
+nnoremap <silent> <leader>xw <C-W>q
