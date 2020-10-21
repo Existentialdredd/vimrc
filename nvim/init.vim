@@ -1,6 +1,9 @@
 "nvim settings
 source $HOME/dot_files/nvim/nvim_settings.vim
 
+"nvim autocommands
+source $HOME/dot_files/nvim/nvim_autocmds.vim
+
 "nvim remaps
 source $HOME/dot_files/nvim/nvim_remaps.vim
 
@@ -45,3 +48,5 @@ source $HOME/dot_files/nvim/plugins/coc_config.vim
 source $HOME/dot_files/nvim/plugins/vimade_config.vim
 
 
+" vim highlightyank
+source $HOME/dot_files/nvim/plugins/vim-highlightyank_config.vim
