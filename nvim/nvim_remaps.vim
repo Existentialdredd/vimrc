@@ -1,3 +1,4 @@
+
 " Restart with plugin install
 map <silent> <Leader>v :source ~/.config/nvim/init.vim<CR>:PlugInstall<CR>:bdelete<CR>:exe ":echo 'init.vim reloaded'"<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
@@ -40,4 +41,3 @@ map <leader>b :Buffers<CR>
 
 nnoremap <silent> <leader>xb :bp\|bd #<CR>
 nnoremap <silent> <leader>xB :bd <CR>
-nnoremap <silent> <leader>xw <C-W>q
