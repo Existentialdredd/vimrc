@@ -41,3 +41,6 @@ map <leader>b :Buffers<CR>
 
 nnoremap <silent> <leader>xb :bp\|bd #<CR>
 nnoremap <silent> <leader>xB :bd <CR>
+
+" Movement Mappings
+onoremap i: :<c-u>normal! t:vT:<cr>
