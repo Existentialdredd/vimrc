@@ -20,6 +20,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set signcolumn=yes
 "set termguicolors
 set scrolloff=8
 set noshowmode
@@ -38,7 +39,6 @@ let mapleader = " "
 " terminal mode
 :tnoremap <Esc> <C-\><C-n>
 
-colorscheme gruvbox-material
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
