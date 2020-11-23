@@ -3,7 +3,7 @@
 
 export TERM="xterm-256color"
 
-export SHELL=/usr/bin/zsh
+export SHELL=/usr/local/bin/zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/upenner/.oh-my-zsh"
@@ -73,6 +73,8 @@ ZSH_THEME="amuse"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode tmux zsh-syntax-highlighting zsh-autosuggestions)
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=black,bg=#6e6d6d,bold"
 
 source $ZSH/oh-my-zsh.sh
 
