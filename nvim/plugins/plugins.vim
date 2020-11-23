@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'suan/vim-instant-markdown', {'for':'markdown'}
+"Plug 'suan/vim-instant-markdown', {'for':'markdown'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
@@ -25,3 +25,6 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'TaDaa/vimade'
 Plug 'machakann/vim-highlightedyank'
 call plug#end()
+
+
+colorscheme gruvbox-material
