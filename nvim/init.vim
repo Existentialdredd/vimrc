@@ -1,11 +1,11 @@
 
-"nvim settings
+" nvim settings
 source $HOME/dot_files/nvim/nvim_settings.vim
 
-"nvim remaps
+" nvim remaps
 source $HOME/dot_files/nvim/nvim_remaps.vim
 
-"plugins
+" plugins
 source $HOME/dot_files/nvim/plugins/plugins.vim
 
 "colorschemes
@@ -40,13 +40,15 @@ source $HOME/dot_files/nvim/plugins/coc_config.vim
 
 " ale
 "source $HOME/dot_files/nvim/plugins/ale_config.vim
-"
 
 " vimade
 source $HOME/dot_files/nvim/plugins/vimade_config.vim
 
 " vim highlightyank
 source $HOME/dot_files/nvim/plugins/vim-highlightyank_config.vim
+
+" vim-instant-markdown
+source $HOME/dot_files/nvim/plugins/vim-instant-markdown_config.vim
 
 "nvim autocommands
 source $HOME/dot_files/nvim/nvim_autocmds.vim
