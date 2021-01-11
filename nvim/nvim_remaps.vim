@@ -1,4 +1,3 @@
-
 " Restart with plugin install
 map <silent> <Leader>v :source ~/.config/nvim/init.vim<CR>:PlugInstall<CR>:bdelete<CR>:exe ":echo 'init.vim reloaded'"<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
@@ -44,3 +43,7 @@ nnoremap <silent> <leader>xB :bd <CR>
 
 " Movement Mappings
 onoremap i: :<c-u>normal! t:vT:<cr>
+
+" Insert Mode Tabbing
+inoremap <C-h> <C-d>
+inoremap <C-l> <C-t>
