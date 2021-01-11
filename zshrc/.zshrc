@@ -1,11 +1,16 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# for Stanford CoreNLP
+export CLASSPATH=$CLASSPATH:~/stanford-corenlp-4.2.0/*:
+
+# So stanza knows where the corenlp client is.
+export CORENLP_HOME=~/stanza-stanford-corenlp
 
 export TERM="xterm-256color"
 
 export SHELL=/usr/local/bin/zsh
 
-# Path to your oh-my-zsh installation.
+#Path to your oh-my-zsh installation.
 export ZSH="/Users/upenner/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -127,3 +132,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/upenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/upenner/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/upenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/upenner/google-cloud-sdk/completion.zsh.inc'; fi
