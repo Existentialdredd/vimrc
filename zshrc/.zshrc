@@ -132,6 +132,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH="/Users/upenner/Library/Python/3.7/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/upenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/upenner/google-cloud-sdk/path.zsh.inc'; fi
