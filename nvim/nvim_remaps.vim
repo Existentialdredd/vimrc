@@ -28,12 +28,14 @@ nnoremap <Leader>- :vertical resize -5<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" replace all instances in current search result highlighing
-nnoremap <leader>r :%s///g<Left><Left>
-nnoremap <leader>rc :%s///gc<Left><Left><Left>
+" replace all instances of last search result highlighing
+nnoremap <leader>rs :%s/<C-R>///g<Left><Left>
+" nnoremap <leader>rc :%s///gc<Left><Left><Left>
 
 " find and replace the highlighted text (in visual mode) globally
-vnoremap <C-h> ""y:%s/<C-R>=escape(@", '/\')<CR>//gc<Left><Left><Left>
+vnoremap <Leader>rh ""y:%s/<C-R>=escape(@", '/\')<CR>//gc<Left><Left><Left>
+" search for all instance of highlighted text
+vnoremap <Leader>sh /<C-R>=escape(@", '/\')<CR>
 
 nnoremap <leader>B :buffers <CR>:b<space>
 map <leader>b :Buffers<CR>
