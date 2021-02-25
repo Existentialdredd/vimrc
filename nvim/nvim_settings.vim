@@ -32,6 +32,7 @@ set cursorline
 set background=dark
 
 highlight CursorLine ctermbg=0 guibg=lightgrey  " cursorline highlightinh
+highlight Visual ctermbg=0 guibg=white
 
 let loaded_matchparen = 1
 let mapleader = " "
