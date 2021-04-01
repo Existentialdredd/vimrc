@@ -13,6 +13,10 @@ export SHELL=/usr/local/bin/zsh
 #Path to your oh-my-zsh installation.
 export ZSH="/Users/upenner/.oh-my-zsh"
 
+# pyenv variables
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -139,3 +143,6 @@ if [ -f '/Users/upenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/upenner
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/upenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/upenner/google-cloud-sdk/completion.zsh.inc'; fi
+
+# pyenv (needs to be at the end)
+if command -v pyenv 1>/dev/null 2>&1; then;  eval "$(pyenv init -)";fi
