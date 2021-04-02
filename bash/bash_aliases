@@ -1,7 +1,4 @@
 #!/bin/bash
+export PROG='/users/ericpenner/desktop/programming'
 
-export PROJ="/Users/upenner/desktop/projects"
-
-export AIDA="/Users/upenner/desktop/projects/aida"
-
-export GITLAB_USERNAME="ericpnr"
+export	QUORA='/users/ericpenner/desktop/projects/quora'

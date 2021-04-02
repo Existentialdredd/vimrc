@@ -12,7 +12,7 @@ source $HOME/dot_files/nvim/plugins/plugins.vim
 source $HOME/dot_files/nvim/plugins/gruvbox_config.vim
 
 "polyglot config
-source $HOME/dot_files/nvim/plugins/ployglot_config.vim
+"source $HOME/dot_files/nvim/plugins/ployglot_config.vim
 
 " netrw
 source $HOME/dot_files/nvim/plugins/netrw_config.vim

@@ -11,7 +11,7 @@ export TERM="xterm-256color"
 export SHELL=/usr/local/bin/zsh
 
 #Path to your oh-my-zsh installation.
-export ZSH="/Users/upenner/.oh-my-zsh"
+export ZSH="/Users/ericpenner/.oh-my-zsh"
 
 # pyenv variables
 export PYENV_ROOT="$HOME/.pyenv"
@@ -87,11 +87,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=black,bg=#6e6d6d,bold"
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -f '/Users/upenner/dot_files/zshrc/zshrc_functions' ]; then source '/Users/upenner/dot_files/zshrc/zshrc_functions'; fi
+if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_functions' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_functions'; fi
 
-if [ -f '/Users/upenner/dot_files/zshrc/zshrc_aliases' ]; then source '/Users/upenner/dot_files/zshrc/zshrc_aliases'; fi
+if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_aliases' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_aliases'; fi
 
-if [ -f '/Users/upenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source '/Users/upenner/dot_files/zshrc/zshrc_secure_aliases'; fi
+if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases'; fi
 
 # if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then source '/usr/local/etc/bash_completion.d/git-completion.zsh'; fi
 
@@ -122,27 +122,35 @@ if [ -f '/Users/upenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source '/U
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # >>> conda initialize >>>
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# OLD added by Anaconda3 5.1.0 installer
+#export PATH="/Users/ericpenner/anaconda3/bin:$PATH"
+
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/upenner/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/ericpenner/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/upenner/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/upenner/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/ericpenner/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ericpenner/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/upenner/anaconda3/bin:$PATH"
+        export PATH="/Users/ericpenner/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="/Users/upenner/Library/Python/3.7/bin:$PATH"
+export PATH="/Users/ericpenner/Library/Python/3.7/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/upenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/upenner/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/ericpenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/upenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/upenner/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/ericpenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/completion.zsh.inc'; fi
 
 # pyenv (needs to be at the end)
 if command -v pyenv 1>/dev/null 2>&1; then;  eval "$(pyenv init -)";fi

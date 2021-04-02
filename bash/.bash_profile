@@ -15,9 +15,6 @@ if [ -f '/Users/ericpenner/Users/ericpenner/google-cloud-sdk/path.bash.inc' ]; t
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ericpenner/Users/ericpenner/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/ericpenner/Users/ericpenner/google-cloud-sdk/completion.bash.inc'; fi
 
-export PROG='/users/ericpenner/desktop/programming'
-
-export	QUORA='/users/ericpenner/desktop/projects/quora'
 
 if [ -f $HOME/.bashrc ]; then
         source $HOME/.bashrc

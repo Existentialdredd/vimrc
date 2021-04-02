@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-export PROJ="/Users/upenner/desktop/projects"
+export PROG='/users/ericpenner/desktop/programming'
 
-export AIDA="/Users/upenner/desktop/projects/aida"
-
-export GITLAB_USERNAME="ericpnr"
-
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/upenner/dot_files/access_keys/gc_rndbou_service_account_key.json"
+export	QUORA='/users/ericpenner/desktop/projects/quora'
