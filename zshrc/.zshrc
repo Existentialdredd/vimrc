@@ -83,7 +83,7 @@ ZSH_THEME="amuse"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode tmux zsh-syntax-highlighting zsh-autosuggestions)
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=black,bg=#6e6d6d,bold"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#0f0f0f,bg=#6e6d6d,bold"
 
 source $ZSH/oh-my-zsh.sh
 
