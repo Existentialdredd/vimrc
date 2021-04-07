@@ -1,0 +1,8 @@
+{
+    "suggest.enablePreview": true,
+    "python.jediEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+    "markdownlint.config": {"line-length": false,
+                            "no-duplicate-header": false}
+}
