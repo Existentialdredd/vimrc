@@ -1,8 +1,11 @@
 {
     "suggest.enablePreview": true,
     "python.jediEnabled": true,
+    "python.jediPath":"~/.pyenv/versions/3.7.3/lib/python3.7/site-packages/jedi",
+    "python.pipenvPath": "~/.local/bin/pipenv",
     "python.linting.flake8Enabled": true,
     "python.formatting.provider": "yapf",
+    "python.venvPath": "~/.virtualenvs",
     "markdownlint.config": {"line-length": false,
                             "no-duplicate-header": false}
 }

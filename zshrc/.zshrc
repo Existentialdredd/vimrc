@@ -1,7 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # for Stanford CoreNLP
-export CLASSPATH=$CLASSPATH:~/stanford-corenlp-4.2.0/*:
+
+export CLASSPATH=$CLASSPATH:~/stanford-corenlp-full-2018-02-27:
+export CLASSPATH=$CLASSPATH:~/Desktop/programming/py_stuff/design_patterns/strategy_pattern/:
 
 # So stanza knows where the corenlp client is.
 export CORENLP_HOME=~/stanza-stanford-corenlp
@@ -16,6 +18,15 @@ export ZSH="/Users/ericpenner/.oh-my-zsh"
 # pyenv variables
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# pipenv paths
+export PATH="/Users/ericpenner/.local/bin:$PATH"
+
+# export WORKON_HOME=$HOME/.virtualenvs
+# export PROJECT_HOME=$HOME/Devel
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/.local/lib/virtualenvwrapper
+# source /Users/ericpenner/.local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -93,6 +104,8 @@ if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_aliases' ]; then source '/Users
 
 if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases'; fi
 
+
+
 # if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then source '/usr/local/etc/bash_completion.d/git-completion.zsh'; fi
 
 # User configuration
@@ -124,33 +137,17 @@ if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source 
 # >>> conda initialize >>>
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export PATH
+#PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+#export PATH
 
 # OLD added by Anaconda3 5.1.0 installer
 #export PATH="/Users/ericpenner/anaconda3/bin:$PATH"
 
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/ericpenner/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/ericpenner/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ericpenner/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/ericpenner/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH="/Users/ericpenner/Library/Python/3.7/bin:$PATH"
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ericpenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/path.zsh.inc'; fi
+#if [ -f '/Users/ericpenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ericpenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/completion.zsh.inc'; fi
+## The next line enables shell command completion for gcloud.
+#if [ -f '/Users/ericpenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/completion.
 
 # pyenv (needs to be at the end)
 if command -v pyenv 1>/dev/null 2>&1; then;  eval "$(pyenv init -)";fi
