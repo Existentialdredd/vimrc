@@ -32,6 +32,9 @@ source $HOME/dot_files/nvim/plugins/lsp_config.vim
 "nvim cmp config
 source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
 
+"tree sitter config
+source $HOME/dot_files/nvim/plugins/treesitter_config.lua
+
 " coc
 "source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
 
@@ -61,5 +64,4 @@ source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
 
 " vim-instant-markdown
 "source $HOME/dot_files/nvim/plugins/vim-instant-markdown_config.vim
-
 
