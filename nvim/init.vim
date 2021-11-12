@@ -20,14 +20,20 @@ source $HOME/dot_files/nvim/plugins/nerdtree_config.vim
 " Sweet Sweet FuGITive
 source $HOME/dot_files/nvim/plugins/fugitive_config.vim
 
-" coc
-source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
-
 " vim highlightyank
 source $HOME/dot_files/nvim/plugins/vim-highlightyank_config.vim
 
 "nvim autocommands
 source $HOME/dot_files/nvim/nvim_autocmds.vim
+
+"lsp config
+source $HOME/dot_files/nvim/plugins/lsp_config.vim
+
+"nvim cmp config
+source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
+
+" coc
+"source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
 
 "polyglot config
 "source $HOME/dot_files/nvim/plugins/ployglot_config.vim
@@ -55,4 +61,5 @@ source $HOME/dot_files/nvim/nvim_autocmds.vim
 
 " vim-instant-markdown
 "source $HOME/dot_files/nvim/plugins/vim-instant-markdown_config.vim
+
 
