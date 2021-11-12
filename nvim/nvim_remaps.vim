@@ -49,3 +49,6 @@ onoremap i: :<c-u>normal! t:vT:<cr>
 " Insert Mode Tabbing
 inoremap <C-h> <C-d>
 inoremap <C-l> <C-t>
+
+nnoremap <C-e> :lua require('cmp').complete()<CR>
+

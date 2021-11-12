@@ -58,3 +58,4 @@ vnoremap X "_d
 inoremap <C-c> <esc>
 
 set shellcmdflag=-ic
+
