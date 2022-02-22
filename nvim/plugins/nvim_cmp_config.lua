@@ -73,3 +73,4 @@ require('lspconfig')['pyright'].setup{capabilities = capabilities}
 require('lspconfig')['bashls'].setup{capabilities = capabilities}
 require('lspconfig')['dockerls'].setup{capabilities = capabilities}
 require('lspconfig')['vimls'].setup{capabilities = capabilities}
+require('lspconfig')['r_language_server'].setup{capabilities = capabilities}
