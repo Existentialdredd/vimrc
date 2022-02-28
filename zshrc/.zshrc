@@ -112,7 +112,7 @@ if [ -f '~/dot_files/zshrc/zshrc_secure_aliases' ]; then source '~/dot_files/zsh
 
 export PATH="~/oath/oath:${PATH}"
 
-## PYENV Stuff
+# PYENV Stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/.pyenv/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
@@ -120,3 +120,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
+
+
+#autoload -U +X compinit && compinit
+#autoload -U +X bashcompinit && bashcompinit
+#. $HOME/.zillow-bootstrap/files/init
