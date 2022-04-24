@@ -104,11 +104,11 @@ source $ZSH/oh-my-zsh.sh
 
 export TERM="xterm-256color"
 
-if [ -f '~/dot_files/zshrc/zshrc_functions' ]; then source '~/dot_files/zshrc/zshrc_functions'; fi
+if [ -f $HOME/dot_files/zshrc/zshrc_functions ]; then source $HOME/dot_files/zshrc/zshrc_functions; fi
 
-if [ -f '~/dot_files/zshrc/zshrc_aliases' ]; then source '~/dot_files/zshrc/zshrc_aliases'; fi
+if [ -f $HOME/dot_files/zshrc/zshrc_aliases ]; then source $HOME/dot_files/zshrc/zshrc_aliases; fi
 
-if [ -f '~/dot_files/zshrc/zshrc_secure_aliases' ]; then source '~/dot_files/zshrc/zshrc_secure_aliases'; fi
+if [ -f $HOME/dot_files/zshrc/zshrc_secure_aliases ]; then source $HOME/dot_files/zshrc/zshrc_secure_aliases; fi
 
 export PATH="~/oath/oath:${PATH}"
 

@@ -5,6 +5,7 @@ function tsr {
   tmux send-keys -t right "$args" C-m
 }
 
+
 function tsb {
   args=$@
   tmux send-keys -t bottom "$args" C-m
