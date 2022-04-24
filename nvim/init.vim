@@ -30,7 +30,7 @@ source $HOME/dot_files/nvim/nvim_autocmds.vim
 source $HOME/dot_files/nvim/plugins/lsp_config.vim
 
 "nvim cmp config
-source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
+"source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
 
 "tree sitter config
 source $HOME/dot_files/nvim/plugins/treesitter_config.lua
