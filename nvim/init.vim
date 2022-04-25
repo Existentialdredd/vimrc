@@ -35,6 +35,9 @@ source $HOME/dot_files/nvim/plugins/lsp_config.vim
 "tree sitter config
 source $HOME/dot_files/nvim/plugins/treesitter_config.lua
 
+"functions
+lua require('ep.globals')
+
 " coc
 "source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
 
