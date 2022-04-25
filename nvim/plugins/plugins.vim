@@ -19,6 +19,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
+Plug 'nvim-lua/plenary.nvim'
+Plug '/Users/ericpenner/Desktop/projects/nvim_plugins/stackmap'
 "Plug 'suan/vim-instant-markdown', {'for':'markdown'}
 "Plug 'vuciv/vim-bujo'
 "Plug 'tpope/vim-dispatch'
