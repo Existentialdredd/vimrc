@@ -8,6 +8,4 @@ ln -s ~/dot_files/bash/.bash_profile ~/.bash_profile
 
 ln -s ~/dot_files/bash/.bashrc ~/.bash_profile
 
-ln -s ~/dot_files/nvim/init.vim ~/.config/nvim/init.vim
-
-ln -s ~/dot_files/nvim/plugins/coc/coc-settings.json ~/.config/nvim/coc-setting.json
+ln -s ~/dot_files/nvim ~/.config/nvim
