@@ -64,7 +64,6 @@ local custom_lsp_attach = function(client)
     vim.api.nvim_buf_set_keymap(0, 'n', '<space>gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<space>gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<space>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true})
-    vim.api.nvim_buf_set_keymap(0, 'n', '<K>', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<C-n>', '<cmd>lua vim.diagnostic.goto_next()<CR> <cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<C-p>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', {noremap = true})
@@ -84,7 +83,7 @@ local custom_lsp_attach = function(client)
 
 local pyright = require('lspconfig').pyright
 
-pyright.setup({
+Pyright_base_config = {
     on_attach = custom_lsp_attach,
     capabilities = capabilities,
     settings = {
@@ -95,7 +94,9 @@ pyright.setup({
                 },
             },
         },
-})
+}
+ pyright.setup(Pyright_base_config)
+
 
 require('lspconfig').bashls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
 require('lspconfig').dockerls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
