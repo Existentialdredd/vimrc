@@ -12,7 +12,7 @@ source $HOME/dot_files/nvim/plugins/plugins.vim
 source $HOME/dot_files/nvim/plugins/gruvbox_config.vim
 
 " fzf
-source $HOME/dot_files/nvim/plugins/fzf_config.vim
+"source $HOME/dot_files/nvim/plugins/fzf_config.vim
 
 " nerdtree
 source $HOME/dot_files/nvim/plugins/nerdtree_config.vim
@@ -43,6 +43,9 @@ lua require("globals")
 
 "lsp configuration
 lua require("lsp_config")
+
+"Telescope config
+lua require("telescope_config")
 
 "source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
 
