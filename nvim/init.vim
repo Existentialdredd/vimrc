@@ -11,9 +11,6 @@ source $HOME/dot_files/nvim/plugins/plugins.vim
 "colorschemes
 source $HOME/dot_files/nvim/plugins/gruvbox_config.vim
 
-" fzf
-source $HOME/dot_files/nvim/plugins/fzf_config.vim
-
 " nerdtree
 source $HOME/dot_files/nvim/plugins/nerdtree_config.vim
 
@@ -27,16 +24,22 @@ source $HOME/dot_files/nvim/plugins/vim-highlightyank_config.vim
 source $HOME/dot_files/nvim/nvim_autocmds.vim
 
 "lsp config
-source $HOME/dot_files/nvim/plugins/lsp_config.vim
-
-"nvim cmp config
-"source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
+lua require('ep.lsp_config')
 
 "tree sitter config
 source $HOME/dot_files/nvim/plugins/treesitter_config.lua
 
 "functions
 lua require('ep.globals')
+
+"Telescope setup
+lua require('ep.telescope_config')
+
+"Telescope setup
+lua require('ep.devicons_config')
+
+" fzf
+"source $HOME/dot_files/nvim/plugins/fzf_config.vim
 
 " coc
 "source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
