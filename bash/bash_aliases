@@ -1,4 +1,3 @@
 #!/bin/bash
-export PROG='/users/ericpenner/desktop/programming'
 
-export	QUORA='/users/ericpenner/desktop/projects/quora'
+alias l="ls -al"
