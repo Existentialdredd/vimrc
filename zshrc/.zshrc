@@ -1,32 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-# for Stanford CoreNLP
-
-export CLASSPATH=$CLASSPATH:~/stanford-corenlp-full-2018-02-27:
-export CLASSPATH=$CLASSPATH:~/Desktop/programming/py_stuff/design_patterns/strategy_pattern/:
-
-# So stanza knows where the corenlp client is.
-export CORENLP_HOME=~/stanza-stanford-corenlp
-
-export TERM="xterm-256color"
-
-export SHELL=/usr/local/bin/zsh
-
-#Path to your oh-my-zsh installation.
-export ZSH="/Users/ericpenner/.oh-my-zsh"
-
-# pyenv variables
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-# pipenv paths
-export PATH="/Users/ericpenner/.local/bin:$PATH"
-
-# export WORKON_HOME=$HOME/.virtualenvs
-# export PROJECT_HOME=$HOME/Devel
-# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/.local/lib/virtualenvwrapper
-# source /Users/ericpenner/.local/bin/virtualenvwrapper.sh
+#### Oh My Zsh Stuff ####
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -69,6 +43,8 @@ ZSH_THEME="amuse"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -98,16 +74,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#0f0f0f,bg=#6e6d6d,bold"
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_functions' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_functions'; fi
-
-if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_aliases' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_aliases'; fi
-
-if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases'; fi
-
-
-
-# if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then source '/usr/local/etc/bash_completion.d/git-completion.zsh'; fi
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -134,20 +100,23 @@ if [ -f '/Users/ericpenner/dot_files/zshrc/zshrc_secure_aliases' ]; then source 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# >>> conda initialize >>>
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-#PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-#export PATH
+### Oh My Zsh END ###
 
-# OLD added by Anaconda3 5.1.0 installer
-#export PATH="/Users/ericpenner/anaconda3/bin:$PATH"
+export TERM="xterm-256color"
 
-# The next line updates PATH for the Google Cloud SDK.
-#if [ -f '/Users/ericpenner/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f $HOME/dot_files/zshrc/zshrc_functions ]; then source $HOME/dot_files/zshrc/zshrc_functions; fi
 
-## The next line enables shell command completion for gcloud.
-#if [ -f '/Users/ericpenner/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ericpenner/google-cloud-sdk/completion.
+if [ -f $HOME/dot_files/zshrc/zshrc_aliases ]; then source $HOME/dot_files/zshrc/zshrc_aliases; fi
 
-# pyenv (needs to be at the end)
-if command -v pyenv 1>/dev/null 2>&1; then;  eval "$(pyenv init -)";fi
+if [ -f $HOME/dot_files/zshrc/zshrc_secure_aliases ]; then source $HOME/dot_files/zshrc/zshrc_secure_aliases; fi
+
+export PATH="~/oath/oath:${PATH}"
+
+## PYENV Stuff
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"

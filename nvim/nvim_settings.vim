@@ -58,3 +58,5 @@ vnoremap X "_d
 inoremap <C-c> <esc>
 
 set shellcmdflag=-ic
+
+let g:python3_host_prog = "~/.pyenv/versions/3.7.3/bin/python3.7"

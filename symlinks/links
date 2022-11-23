@@ -1,13 +1,11 @@
-ln -s /Users/ericpenner/dot_files/tmux/.tmux.config /Users/ericpenner/.tmux.conf
+ln -s ~/dot_files/tmux/.tmux.config ~/.tmux.conf
 
-ln -s /Users/ericpenner/dot_files/vim/.vimrc /Users/ericpenner/.vimrc
+ln -s ~/dot_files/vim/.vimrc ~/.vimrc
 
-ln -s /Users/ericpenner/dot_files/zshrc/.zshrc /Users/ericpenner/.zshrc
+ln -s ~/dot_files/zshrc/.zshrc ~/.zshrc
 
-ln -s /Users/ericpenner/dot_files/bash/.bash_profile /Users/ericpenner/.bash_profile
+ln -s ~/dot_files/bash/.bash_profile ~/.bash_profile
 
-ln -s /Users/ericpenner/dot_files/bash/.bashrc /Users/ericpenner/.bash_profile
+ln -s ~/dot_files/bash/.bashrc ~/.bash_profile
 
-ln -s /Users/ericpenner/dot_files/nvim/init.vim /Users/ericpenner/.config/nvim/init.vim
-
-ln -s /Users/ericpenner/dot_files/nvim/coc-settings.json /Users/ericpenner/dot_files/nvim/plugins/coc/coc-setting.json
+ln -s ~/dot_files/nvim ~/.config/nvim
