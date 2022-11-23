@@ -96,6 +96,9 @@ pyright.setup({
         },
 })
 
+local marksman = require('lspconfig').marksman
+marksman.setup({capabilities=capabilities, on_attach = custom_lsp_attach})
+
 local bashls = require('lspconfig').bashls
 bashls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
 
