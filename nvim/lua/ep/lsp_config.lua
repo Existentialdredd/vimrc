@@ -101,49 +101,49 @@ BashBaseConfig = { capabilities=capabilities, on_attach = custom_lsp_attach }
 bashls.setup(BashBaseConfig)
 
 --Docker Language Server
-local dockerls = require('lspconfig').dockerls
-DockerBaseConfig = { capabilities=capabilities, on_attach = custom_lsp_attach }
-dockerls.setup(DockerBaseConfig)
+--local dockerls = require('lspconfig').dockerls
+--DockerBaseConfig = { capabilities=capabilities, on_attach = custom_lsp_attach }
+--dockerls.setup(DockerBaseConfig)
 
 --Vim Language Server
-local vimls = require('lspconfig').vimls
-VimBaseConfig = {capabilities=capabilities}
-vimls.setup(VimBaseConfig)
+--local vimls = require('lspconfig').vimls
+--VimBaseConfig = {capabilities=capabilities}
+--vimls.setup(VimBaseConfig)
 
 -- Lua-Language-Server
-local luals = require('lspconfig').sumneko_lua
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
+--local luals = require('lspconfig').sumneko_lua
+--local runtime_path = vim.split(package.path, ';')
+--table.insert(runtime_path, "lua/?.lua")
+--table.insert(runtime_path, "lua/?/init.lua")
 
-LuaBaseConfig = {
-  on_attach = custom_lsp_attach,
-  capabilities = capabilities,
-  cmd = { "lua-language-server"},
-  filetypes = { "lua" },
-  root_dir = util.root_pattern(".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"),
-  single_file_support = true,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = 'LuaJIT',
-        -- Setup your lua path
-        path = runtime_path,
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-}
-luals.setup(LuaBaseConfig)
+--LuaBaseConfig = {
+  --on_attach = custom_lsp_attach,
+  --capabilities = capabilities,
+  --cmd = { "lua-language-server"},
+  --filetypes = { "lua" },
+  --root_dir = util.root_pattern(".luarc.json", ".luacheckrc", ".stylua.toml", "selene.toml", ".git"),
+  --single_file_support = true,
+  --settings = {
+    --Lua = {
+      --runtime = {
+        ---- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        --version = 'LuaJIT',
+        ---- Setup your lua path
+        --path = runtime_path,
+      --},
+      --diagnostics = {
+        ---- Get the language server to recognize the `vim` global
+        --globals = {'vim'},
+      --},
+      --workspace = {
+        ---- Make the server aware of Neovim runtime files
+        --library = vim.api.nvim_get_runtime_file("", true),
+      --},
+      ---- Do not send telemetry data containing a randomized but unique identifier
+      --telemetry = {
+        --enable = false,
+      --},
+    --},
+  --},
+--}
+--luals.setup(LuaBaseConfig)
