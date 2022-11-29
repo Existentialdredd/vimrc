@@ -1,0 +1,41 @@
+snippet save_to_json_dataclass
+DATADIR = ""
+
+def save_to_json(self, file_path: str = None):
+	"""
+	PURPOSE:
+	"""
+	if file_path is None:
+		save_path = Path(DATADIR).joinpath(${1:OutputDir_0}, ${2:OutputDir_1})
+		if not save_path.is_dir():
+			save_path.mkdir()
+		save_path = save_path.joinpath(${3:FileName})
+	else:
+		save_path = Path(file_path)
+		if not save_path.parents[0].is_dir():
+			save_path.mkdir()
+
+	with save_path.open('w') as f:
+		json_str = self.to_json()
+		f.write(json_str)
+endsnippet
+
+snippet load_from_json_dataclass
+DATADIR = None
+
+@classmethod
+def load_from_json(cls, file_path):
+	"""
+	"""
+	if DATADIR is None:
+		full_path = Path(file_path)
+	else:
+		full_path = Path(DATADIR).joinpath(file_path)
+
+	with full_path.open('r') as f:
+		file_dict = json.load()
+
+	return cls.from_dict(file_dict)
+
+
+endsnippet

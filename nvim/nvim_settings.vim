@@ -58,3 +58,5 @@ vnoremap X "_d
 inoremap <C-c> <esc>
 
 set shellcmdflag=-ic
+
+let g:python3_host_prog = '/Users/ericpe/.pyenv/versions/neovim3/bin/python3.6'

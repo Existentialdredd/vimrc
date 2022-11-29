@@ -1,16 +1,28 @@
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
-Plug 'vim-utils/vim-man'
-Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'gruvbox-community/gruvbox'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
 Plug 'sainnhe/gruvbox-material'
 Plug 'machakann/vim-highlightedyank'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'SirVer/ultisnips'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+"Plug 'vim-utils/vim-man'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'vim-utils/vim-man'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'christoomey/vim-tmux-navigator'
+"Plug 'gruvbox-community/gruvbox'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'suan/vim-instant-markdown', {'for':'markdown'}
 "Plug 'vuciv/vim-bujo'
 "Plug 'tpope/vim-dispatch'
@@ -25,4 +37,3 @@ Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 
-colorscheme gruvbox-material
