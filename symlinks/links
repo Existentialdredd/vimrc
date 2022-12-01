@@ -6,7 +6,7 @@ ln -s ~/dot_files/zshrc/.zshrc ~/.zshrc
 
 ln -s ~/dot_files/bash/.bash_profile ~/.bash_profile
 
-ln -s ~/dot_files/bash/.bashrc ~/.bash_profile
+ln -s ~/dot_files/bash/.bashrc ~/.bashrc
 
 ln -s ~/dot_files/nvim ~/.config/nvim
 
