@@ -38,6 +38,9 @@ lua require('ep.telescope_config')
 "Telescope setup
 lua require('ep.devicons_config')
 
+"DAP Config
+lua require('ep.dap_config')
+
 " fzf
 "source $HOME/dot_files/nvim/plugins/fzf_config.vim
 

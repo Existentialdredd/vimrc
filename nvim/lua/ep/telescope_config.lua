@@ -25,6 +25,7 @@ TelescopeBaseConfig = {
 }
 require("telescope").setup(TelescopeBaseConfig)
 require("telescope").load_extension("file_browser")
+require("telescope").load_extension("dap")
 --require("telescope").load_extension("fzf")
 
 vim.api.nvim_set_keymap('n', '<space>ff', '<cmd> Telescope find_files hidden=true <CR>', {noremap=true})
