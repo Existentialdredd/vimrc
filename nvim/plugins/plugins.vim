@@ -13,11 +13,16 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 "Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
-Plug '/Users/ericpenner/Desktop/projects/nvim_plugins/stackmap'
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'rcarriga/nvim-dap'
+Plug 'nvim-telescope/telescope-dap'
 Plug 'kyazdani42/nvim-web-devicons'
+
+"Plug '/Users/ericpenner/Desktop/projects/nvim_plugins/stackmap'
 "Plug 'suan/vim-instant-markdown', {'for':'markdown'}
 "Plug 'vuciv/vim-bujo'
 "Plug 'tpope/vim-dispatch'
