@@ -41,8 +41,14 @@ source $HOME/dot_files/nvim/plugins/ultisnips/ultisnips_config.vim
 "global functions
 lua require("globals")
 
+"mason configuration
+lua require("mason_config")
+
 "lsp configuration
 lua require("lsp_config")
+
+"dap config
+lua require("dap_config")
 
 "Telescope config
 lua require("telescope_config")
