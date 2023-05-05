@@ -7,6 +7,10 @@ vim.o.completeopt = 'menu,menuone,noselect'
 -- nvim-cmp setup
 local cmp = require 'cmp'
 
+local t = function(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
 cmp.setup({
     snippet = {
       expand = function(args)
@@ -14,13 +18,105 @@ cmp.setup({
                  end,
     },
     mapping = {
-      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-      ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-      ['<C-f>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-      ['<C-e>'] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close(),}),
-      ['<CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
-    },
+      ["<Tab>"] = cmp.mapping({
+          c = function()
+              if cmp.visible() then
+                  cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+              else
+                  cmp.complete()
+              end
+          end,
+          i = function(fallback)
+              if cmp.visible() then
+                  cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+              elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+                  vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
+              else
+                  fallback()
+              end
+          end,
+          s = function(fallback)
+              if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+                  vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
+              else
+                  fallback()
+              end
+          end
+      }),
+      ["<S-Tab>"] = cmp.mapping({
+          c = function()
+              if cmp.visible() then
+                  cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+              else
+                  cmp.complete()
+              end
+          end,
+          i = function(fallback)
+              if cmp.visible() then
+                  cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+              elseif vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+                  return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
+              else
+                  fallback()
+              end
+          end,
+          s = function(fallback)
+              if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+                  return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
+              else
+                  fallback()
+              end
+          end
+      }),
+      ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
+      ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
+      ['<C-n>'] = cmp.mapping({
+          c = function()
+              if cmp.visible() then
+                  cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+              else
+                  vim.api.nvim_feedkeys(t('<Down>'), 'n', true)
+              end
+          end,
+          i = function(fallback)
+              if cmp.visible() then
+                  cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+              else
+                  fallback()
+              end
+          end
+      }),
+      ['<C-p>'] = cmp.mapping({
+          c = function()
+              if cmp.visible() then
+                  cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+              else
+                  vim.api.nvim_feedkeys(t('<Up>'), 'n', true)
+              end
+          end,
+          i = function(fallback)
+              if cmp.visible() then
+                  cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+              else
+                  fallback()
+              end
+          end
+      }),
+      ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
+      ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
+      ['<S-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
+      ['<C-e>'] = cmp.mapping({ i = cmp.mapping.close(), c = cmp.mapping.close() }),
+      ['<C-Space>'] = cmp.mapping({
+          i = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false }),
+          c = function(fallback)
+              if cmp.visible() then
+                  cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+              else
+                  fallback()
+              end
+          end
+      }),
+  },
     experimental = {
         native_menu = false,
         ghost_text = true
@@ -49,9 +145,7 @@ cmp.setup({
     })
   })
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- lspconfig setup
 
@@ -64,6 +158,7 @@ local custom_lsp_attach = function(client)
     vim.api.nvim_buf_set_keymap(0, 'n', '<space>gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<space>gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<space>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true})
+    vim.api.nvim_buf_set_keymap(0, 'n', '<space>Fm', '<cmd>lua vim.lsp.buf.format()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<C-n>', '<cmd>lua vim.diagnostic.goto_next()<CR> <cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true})
     vim.api.nvim_buf_set_keymap(0, 'n', '<C-p>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', {noremap = true})
@@ -103,11 +198,13 @@ require('lspconfig').dockerls.setup({ capabilities=capabilities, on_attach = cus
 require('lspconfig').vimls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
 require('lspconfig').r_language_server.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
 require('lspconfig').r_language_server.document_config.default_config.filetypes = {'r', 'rmd', 'R'}
+require('lspconfig').jsonls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach})
+require('lspconfig').yamlls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach})
+require('lspconfig').html.setup({ capabilities=capabilities, on_attach = custom_lsp_attach})
 
 
 -- Lua-Language-Server
 local luals = require('lspconfig').sumneko_lua
-
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
@@ -142,3 +239,5 @@ luals.setup({
     },
   },
 })
+
+vim.api.nvim_create_user_command('Format', 'lua vim.lsp.buf.format()', {})
