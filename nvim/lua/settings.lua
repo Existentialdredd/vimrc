@@ -32,7 +32,7 @@ vim.o.updatetime=50
 vim.o.shortmess="c"
 vim.o.cursorline=true
 vim.o.shellcmdflag="-ic"
-vim.g.python3_host_prog = '/Users/ericpe/.pyenv/versions/neovim3/bin/python3.6'
+vim.g.python3_host_prog = os.getenv("PYTHON_PROG3")
 vim.g.loaded_matchparen = 1
 vim.g.mapleader = " "
 
