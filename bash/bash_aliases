@@ -1,4 +1,6 @@
 #!/bin/bash
-export PROG='/users/ericpenner/desktop/programming'
+alias l = "ls -al"
 
-export	QUORA='/users/ericpenner/desktop/projects/quora'
+# Where neovim with look for python3
+export PYTHON_PROG3="$HOME/.pyenv/versions/neovim3/bin/python3.6"
+
