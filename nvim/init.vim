@@ -1,84 +1,16 @@
 
 " nvim settings
-source $HOME/dot_files/nvim/nvim_settings.vim
+lua require("settings")
+
+" nvim autocommands
+lua require("autocmds")
 
 " nvim remaps
-source $HOME/dot_files/nvim/nvim_remaps.vim
+lua require("remaps")
 
-" plugins
-source $HOME/dot_files/nvim/plugins/plugins.vim
-
-"colorschemes
-source $HOME/dot_files/nvim/plugins/gruvbox_config.vim
-
-" fzf
-"source $HOME/dot_files/nvim/plugins/fzf_config.vim
-
-" nerdtree
-source $HOME/dot_files/nvim/plugins/nerdtree_config.vim
-
-" Sweet Sweet FuGITive
-source $HOME/dot_files/nvim/plugins/fugitive_config.vim
-
-" vim highlightyank
-source $HOME/dot_files/nvim/plugins/vim-highlightyank_config.vim
-
-"nvim autocommands
-source $HOME/dot_files/nvim/nvim_autocmds.vim
-
-"lsp config
-"source $HOME/dot_files/nvim/plugins/lsp_config.vim
-
-"nvim cmp config
-"source $HOME/dot_files/nvim/plugins/nvim_cmp_config.lua
-
-"tree sitter config
-source $HOME/dot_files/nvim/plugins/treesitter_config.lua
+" Plugins
+lua require("plugins")
 
 "ultisnips config
-source $HOME/dot_files/nvim/plugins/ultisnips/ultisnips_config.vim
-
-"global functions
-lua require("globals")
-
-"mason configuration
-lua require("mason_config")
-
-"lsp configuration
-lua require("lsp_config")
-
-"dap config
-lua require("dap_config")
-
-"Telescope config
-lua require("telescope_config")
-
-"source $HOME/dot_files/nvim/plugins/coc/coc_config.vim
-
-"polyglot config
-"source $HOME/dot_files/nvim/plugins/ployglot_config.vim
-
-" netrw
-"source $HOME/dot_files/nvim/plugins/netrw_config.vim
-
-
-" undotree
-"source $HOME/dot_files/nvim/plugins/undotree_config.vim
-
-" bujo
-"source $HOME/dot_files/nvim/plugins/bujo_config.vim
-
-
-" jedi-vim
-"source $HOME/dot_files/nvim/plugins/jedi-vim_config.vim
-
-" ale
-"source $HOME/dot_files/nvim/plugins/ale_config.vim
-
-" vimade
-"source $HOME/dot_files/nvim/plugins/vimade_config.vim
-
-
-" vim-instant-markdown
-"source $HOME/dot_files/nvim/plugins/vim-instant-markdown_config.vim
+"source $HOME/dot_files/nvim/plugins/ultisnips/ultisnips_config.vim
 

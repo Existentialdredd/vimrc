@@ -36,4 +36,3 @@ vim.api.nvim_set_keymap('n', '<space>fm', '<cmd>Telescope keymaps <CR>', {norema
 vim.api.nvim_set_keymap('n', '<space>fr', '<cmd>Telescope registers <CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<space>b', '<cmd>Telescope buffers <CR>', {noremap = true})
 require('telescope').setup(TelescopeBaseConfig)
---vim.api.nvim_set_keymap('n', :
