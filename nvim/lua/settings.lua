@@ -19,8 +19,8 @@ vim.o.wrap=false
 vim.o.smartcase=true
 vim.o.swapfile=false
 vim.o.backup=false
-vim.o.undodir="~/.vim/undodir"
-vim.o.undofile=true
+--vim.o.undodir="~/.vim/undodir"
+vim.o.undofile=false
 vim.o.incsearch=true
 vim.o.signcolumn="yes"
 --vim.o.termguicolors
