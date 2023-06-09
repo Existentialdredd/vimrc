@@ -20,7 +20,7 @@ vim.o.smartcase=true
 vim.o.swapfile=false
 vim.o.backup=false
 vim.o.undodir="~/.vim/undodir"
-vim.o.undofile=true
+vim.o.undofile=false
 vim.o.incsearch=true
 vim.o.signcolumn="yes"
 --vim.o.termguicolors
@@ -37,4 +37,4 @@ vim.g.loaded_matchparen = 1
 vim.g.mapleader = " "
 
 vim.o.background="dark"
-vim.cmd([[colorscheme kanagawa-wave]])
+vim.cmd([[colorscheme gruvbox-material]])
