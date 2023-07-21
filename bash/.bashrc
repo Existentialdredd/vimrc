@@ -5,7 +5,6 @@ if [ -f $HOME'/dot_files/bash/bash_functions' ]; then
     source $HOME'/dot_files/bash/bash_functions'
 else
     echo "bash_functions not found"
-fi
 
 if [ -f $HOME'/dot_files/bash/bash_aliases' ]; then
     source $HOME'/dot_files/bash/bash_aliases'

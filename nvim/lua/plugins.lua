@@ -52,10 +52,8 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use {"preservim/nerdcommenter"}
-  --use {"ellisonleao/gruvbox.nvim"}
   use {"rebelot/kanagawa.nvim"}
   use {"sainnhe/gruvbox-material"}
-
   use {'nvim-treesitter/nvim-treesitter',
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })

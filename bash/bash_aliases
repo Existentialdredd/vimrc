@@ -1,6 +1,6 @@
 #!/bin/bash
-alias l = "ls -al"
+alias l="ls -al"
 
 # Where neovim with look for python3
-export PYTHON_PROG3="$HOME/.pyenv/versions/neovim3/bin/python3.6"
+export PYTHON_PROG3="$HOME/.pyenv/versions/3.9.7/bin/python"
 
