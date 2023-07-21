@@ -1,7 +1,7 @@
 local dap, dapui = require("dap"), require("dapui")
 
 -- Dap Python Config: NOTE require'dap'.setup() is called in the following command
-require('dap-python').setup('/usr/local/bin/python3')
+require('dap-python').setup(os.getenv("PYTHON_PROG3"))
 
 dap.adapters.bashdb = {
   type = 'executable';
@@ -105,7 +105,7 @@ icons = { expanded = "", collapsed = "", current_frame = "" },
         --"watches",
         "console",
       },
-      size = 0.2,
+      size = 0.1,
       position = "top",
     },
   },

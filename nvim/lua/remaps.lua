@@ -30,6 +30,9 @@ vim.api.nvim_set_keymap("n", "<leader>B", ":buffers <CR>:b<space>",  {silent=tru
 vim.api.nvim_set_keymap("n", "<leader>xb", ":bp|bd #<CR>",  {silent=true, noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>xB", ":bd <CR>", {silent=true, noremap=true})
 
+-- terminal remap
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {silent=true, noremap=true})
+
 
 -- Movement Mappings
 --onoremap i: :<c-u>normal! t:vT:<cr>

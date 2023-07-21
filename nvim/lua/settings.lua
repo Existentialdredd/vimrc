@@ -37,4 +37,4 @@ vim.g.loaded_matchparen = 1
 vim.g.mapleader = " "
 
 vim.o.background="dark"
-vim.cmd([[colorscheme kanagawa-wave]])
+vim.cmd([[colorscheme gruvbox-material]])
