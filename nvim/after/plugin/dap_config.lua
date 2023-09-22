@@ -3,6 +3,14 @@ local dap, dapui = require("dap"), require("dapui")
 -- Dap Python Config: NOTE require'dap'.setup() is called in the following command
 require('dap-python').setup(os.getenv("PYTHON_PROG3"))
 
+--require('dap').configurations.python = {{
+  --type = 'python',
+  --request = 'launch',
+  --name = 'CustomLaunch',
+  --program = '${file}',
+  --justMyCode = false,
+--},}
+
 dap.adapters.bashdb = {
   type = 'executable';
   command = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/bash-debug-adapter';
