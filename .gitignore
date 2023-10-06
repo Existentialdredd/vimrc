@@ -1,4 +1,6 @@
 bash_secure_aliases
 zshrc_secure_aliases
+packer_compiled.lua
+.luarc.json
 .DS_Store
 *keys
