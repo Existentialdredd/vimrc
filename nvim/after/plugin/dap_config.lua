@@ -153,6 +153,7 @@ dapui.setup(dap_ui_config)
 vim.api.nvim_create_user_command('Dscopes', 'lua require("dapui").float_element("scopes", {enter=true})', {})
 vim.api.nvim_create_user_command('Dstacks', 'lua require("dapui").float_element("stacks", {enter=true})', {})
 vim.api.nvim_create_user_command('Dbreaks', 'lua require("dapui").float_element("breakpoints", {enter=true})', {})
+vim.api.nvim_create_user_command('Dwatches', 'lua require("dapui").float_element("watches", {enter=true})', {})
 vim.api.nvim_create_user_command('Dclose', 'lua require("dapui").close()', {})
 
 --KeyMaps
