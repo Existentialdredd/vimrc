@@ -29,3 +29,12 @@ FoldStart = function(minlines, level)
     vim.cmd('echo "Folding Activated"')
 end
 
+vim.api.nvim_create_user_command(
+    'FoldStart',
+    function(opts)
+        minlines = tonumber(opts.fargs[1]) or nil
+        level = tonumber(opts.fargs[2]) or nil
+        FoldStart(minlines, level)
+    end,
+    {nargs='*'}
+)

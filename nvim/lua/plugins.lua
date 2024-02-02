@@ -77,7 +77,7 @@ return packer.startup(function(use)
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-cmdline'}
 
-  use {'nvim-telescope/telescope.nvim', tag="0.1.0"}
+  use {'nvim-telescope/telescope.nvim', tag="0.1.4"}
   use {'nvim-telescope/telescope-file-browser.nvim'}
   use {'nvim-tree/nvim-web-devicons'}
 
@@ -85,6 +85,9 @@ return packer.startup(function(use)
   use {'mfussenegger/nvim-dap-python'}
   use {'rcarriga/nvim-dap-ui'}
   use {'theHamsta/nvim-dap-virtual-text'}
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+          require("toggleterm").setup()
+  end}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
