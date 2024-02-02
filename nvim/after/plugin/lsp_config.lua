@@ -199,13 +199,14 @@ require('lspconfig').dockerls.setup({ capabilities=capabilities, on_attach = cus
 require('lspconfig').vimls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
 require('lspconfig').r_language_server.setup({ capabilities=capabilities, on_attach = custom_lsp_attach })
 require('lspconfig').r_language_server.document_config.default_config.filetypes = {'r', 'rmd', 'R'}
-require('lspconfig').jsonls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach})
+require('lspconfig').jsonls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach,
+                                    filetypes={"json", "jsonc", "jsonl"}})
 require('lspconfig').yamlls.setup({ capabilities=capabilities, on_attach = custom_lsp_attach})
 require('lspconfig').html.setup({ capabilities=capabilities, on_attach = custom_lsp_attach})
 
 
 -- Lua-Language-Server
-local luals = require('lspconfig').sumneko_lua
+local luals = require('lspconfig').lua_ls
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
