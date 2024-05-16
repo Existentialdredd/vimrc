@@ -4,4 +4,5 @@ alias l="ls -al"
 # Where neovim with look for python3
 export PYTHON_PROG3="/opt/zillow/.venv/bin/python"
 export MODELCKPT="openclip_base"
+export SPACY="trf"
 
