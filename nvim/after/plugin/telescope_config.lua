@@ -27,6 +27,7 @@ require("telescope").setup(TelescopeBaseConfig)
 require("telescope").load_extension("file_browser")
 
 vim.api.nvim_set_keymap('n', '<space>fb', '<cmd>Telescope file_browser <CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<space>fB', '<cmd>Telescope file_browser path=%:p:h <CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<space>ff', '<cmd>Telescope find_files hidden=true <CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<space>FF', '<cmd>Telescope git_files hidden=true <CR>', {noremap = true})
 vim.api.nvim_set_keymap('n', '<space>fg', '<cmd>Telescope live_grep <CR>', {noremap = true})
