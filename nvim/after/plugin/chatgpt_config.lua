@@ -1,4 +1,3 @@
-
 require("chatgpt").setup({
    api_key_cmd = nil,
    yank_register = "+",
@@ -173,4 +172,7 @@ require("chatgpt").setup({
    },
  })
 
+vim.api.nvim_set_keymap('n', '<space>gg',"<cmd>ChatGPT<CR>", {noremap = true})
+vim.keymap.set({'n','v'}, '<space>gs',"<cmd>ChatGPTRun docstring<CR>", {noremap = true})
+vim.keymap.set({'n','v'}, '<space>ge',"<cmd>ChatGPTRun explain_code <CR>", {noremap = true})
 
