@@ -21,7 +21,7 @@ dap.configurations.sh = {
   {
     type = 'bashdb';
     request = 'launch';
-    name = "Launch file";
+    name = "Launch File Without Arguments";
     showDebugOutput = true;
     pathBashdb = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb';
     pathBashdbLib = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/extension/bashdb_dir';
@@ -30,7 +30,7 @@ dap.configurations.sh = {
     program = "${file}";
     cwd = '${workspaceFolder}';
     pathCat = "cat";
-    pathBash = "/usr/local/bin/bash";
+    pathBash = "/bin/bash";
     pathMkfifo = "mkfifo";
     pathPkill = "pkill";
     args = {};
@@ -38,6 +38,31 @@ dap.configurations.sh = {
     terminalKind = "integrated";
   }
 }
+-- Configuration that takes args
+table.insert(dap.configurations.sh,
+  {
+    type = 'bashdb';
+    request = 'launch';
+    name = "Launch File With Arguments";
+    showDebugOutput = true;
+    pathBashdb = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb';
+    pathBashdbLib = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/extension/bashdb_dir';
+    trace = true;
+    file = "${file}";
+    program = "${file}";
+    cwd = '${workspaceFolder}';
+    pathCat = "cat";
+    pathBash = "/bin/bash";
+    pathMkfifo = "mkfifo";
+    pathPkill = "pkill";
+    args = function()
+      local args_string = vim.fn.input('Arguments: ')
+      return vim.split(args_string, " +")
+    end;
+    env = {};
+    terminalKind = "integrated";
+  }
+)
 
 --Virtual Text Setup
 local virtual_text_config = {
@@ -89,17 +114,6 @@ icons = { expanded = "", collapsed = "", current_frame = "" },
   -- Elements are the elements shown in the layout (in order).
   -- Layouts are opened in order so that earlier layouts take priority in window sizing.
   layouts = {
-    --{
-      --elements = {
-      -- Elements can be strings or table with id and size keys.
-        --{ id = "scopes", size = 0.25 },
-        --"breakpoints",
-        --"stacks",
-        --"watches",
-      --},
-      --size = 40, -- 40 columns
-      --position = "left",
-    --},
     {
       elements = {
         "repl",
@@ -115,6 +129,26 @@ icons = { expanded = "", collapsed = "", current_frame = "" },
       },
       size = 0.1,
       position = "top",
+    },
+    {
+      elements = {
+       --Elements can be strings or table with id and size keys.
+        { id = "scopes", size = 0.25 },
+        "stacks",
+        "watches",
+      },
+      size = 100, -- 100 columns
+      position = "left",
+    },
+    {
+      elements = {
+       --Elements can be strings or table with id and size keys.
+        {id = "repl", size = 0.4},
+        {id = "watches", size = 0.4},
+        {id = "console", size=0.10},
+      },
+      size = 100, -- 100 columns
+      position = "left",
     },
   },
   controls = {
@@ -168,10 +202,13 @@ vim.api.nvim_set_keymap('n', '<space>er',"<cmd>lua require'dap'.repl.toggle()<CR
 vim.api.nvim_set_keymap('n', '<space>el',"<cmd>lua require'dap'.run_last()<CR>", {noremap = true})
 vim.api.nvim_set_keymap('n', '<space>ex',"<cmd>lua require'dap'.terminate()<CR>", {noremap = true})
 vim.api.nvim_set_keymap('n', '<space>eX',"<cmd>lua require'dap'.terminate()<CR> <cmd> lua require'dapui'.close()<CR>", {noremap = true})
+vim.api.nvim_set_keymap('n', '<space>e1',"<cmd>lua require'dapui'.close()<CR> <cmd> lua require'dapui'.toggle(3)<CR>", {noremap = true})
+vim.api.nvim_set_keymap('n', '<space>e2',"<cmd>lua require'dapui'.close()<CR> <cmd> lua require'dapui'.toggle(4)<CR>", {noremap = true})
 
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
+  dapui.toggle(1)
+  dapui.toggle(2)
 end
 --dap.listeners.before.event_terminated["dapui_config"] = function()
   --dapui.close()
