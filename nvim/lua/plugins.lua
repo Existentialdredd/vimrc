@@ -80,10 +80,18 @@ return packer.startup(function(use)
   use {'nvim-telescope/telescope.nvim', tag="0.1.4"}
   use {'nvim-telescope/telescope-file-browser.nvim'}
   use {'nvim-tree/nvim-web-devicons'}
-
+  use({
+    "jackMort/ChatGPT.nvim",
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "folke/trouble.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  })
   use {'mfussenegger/nvim-dap'}
   use {'mfussenegger/nvim-dap-python'}
-  use {'rcarriga/nvim-dap-ui'}
+  use {'rcarriga/nvim-dap-ui', requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}}
   use {'theHamsta/nvim-dap-virtual-text'}
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
           require("toggleterm").setup()
